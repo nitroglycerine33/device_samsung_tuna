@@ -247,7 +247,7 @@ public class ColorTuningPreference extends DialogPreference implements OnClickLi
     private void SetCMSettings() {
         mSeekBars[0].SetNewValue(1766478464);
         mSeekBars[1].SetNewValue(1766478464);
-        mSeekBars[2].SetNewValue(1766478464);
+        mSeekBars[2].SetNewValue(1966478464);
     }
 
     private void SetDarkSettings() {
