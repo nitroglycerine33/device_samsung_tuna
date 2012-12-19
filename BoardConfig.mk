@@ -37,6 +37,12 @@ TARGET_NO_BOOTLOADER := true
 BOARD_KERNEL_BASE := 0x80000000
 # BOARD_KERNEL_CMDLINE :=
 
+# Define kernel config for inline building
+TARGET_KERNEL_CONFIG := luna_tuna_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/tuna
+
+TARGET_PREBUILT_KERNEL := device/samsung/tuna/kernel
+
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := omap4
 TARGET_BOOTLOADER_BOARD_NAME := tuna
@@ -82,6 +88,15 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+# Boot animation
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+TARGET_BOOTANIMATION_USE_RGB565 := true
+
 BOARD_LIB_DUMPSTATE := libdumpstate.tuna
 
 BOARD_USES_SECURE_SERVICES := true
+
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/tuna/recovery_keys.c
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
